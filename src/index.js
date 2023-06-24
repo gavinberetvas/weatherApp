@@ -9,18 +9,18 @@ import { createNewCard } from "./updateUI";
 
 let isExecuting = false;
 
-function processFormData() {
-  location = searchBar.value;
-  return location;
-}
+// function processFormData() {
+//   location = searchBar.value;
+//   return location;
+// }
 
-async function logJSONData() {
+async function logJSONData(location) {
 
-  // if (isExecuting) {
-  //   console.log('Function is already executing. Aborting...');
-  //   return;
-  // }
-  // isExecuting = true;
+  if (isExecuting) {
+    console.log('Function is already executing. Aborting...');
+    return;
+  }
+  isExecuting = true;
 
   const response = await fetch(
     `http://api.weatherapi.com/v1/forecast.json?key=55123b8e2f8c4615b54233627232206&q=${location}&days=7&aqi=yes&alerts=no
@@ -38,7 +38,7 @@ async function logJSONData() {
   const card = createNewCard(jsonData);
   document.querySelector("#weather-cards").appendChild(card);
   
-  // isExecuting = false;
+  isExecuting = false;
 
   return jsonData;
 
@@ -49,9 +49,9 @@ async function logJSONData() {
 const searchBar = document.querySelector("#searchbar");
 const searchButton = document.querySelector("#search");
 searchButton.addEventListener("click", () => {
-  processFormData();
-  logJSONData();
-
+  let location = searchBar.value;
+  logJSONData(location);
+  searchBar.value = ''
   
 });
 
