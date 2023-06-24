@@ -1,0 +1,31 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    display: flex;
+    width: 20rem;
+    height: 5rem;
+    background-color: rgb(51, 142, 222);
+    border-radius: 18px;
+    padding: 1rem;
+    margin: 1rem;
+    flex-direction: column;
+    gap: 1rem
+}
+
+.card-first-row, .card-second-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.city-time-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.high-low-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: .4rem;
+}

@@ -5,17 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Application</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <input id="searchbar" type="text" placeholder="Search.." />
-    <button id="search">Weather!</button>
-    <div id="city">city</div>
-    <div id="condition">condition: </div>
-    <div id="temperatureF">temperature: </div>
-    <div id="feels-like">feels like: </div>
-    <div id="temp-tomorrow">forecast for tomorrow: </div>
+    <div id="searchbar-wrapper">
+      <input id="searchbar" type="text" placeholder="Search.." />
+      <button id="search">Weather!</button>
+    </div>
+
+    <div id="weather-cards">
+      <!-- <div class="sample">
+        <div id="city">city</div>
+        <div id="condition">condition: </div>
+        <div id="temperatureF">temperature: </div>
+        <div id="feels-like">feels like: </div>
+        <div id="temp-tomorrow">forecast for tomorrow: </div>
+      </div>
+      <div class="card sample2">
+        <div class="card-first-row">
+          <div class="city-time-wrapper">
+            <div id="city">city</div>
+            <div id="time">time</div>
+          </div>
+          <div id="temperatureF">temperature: </div>
+        </div>
+
+        <div class="card-second-row">
+          <div id="condition">condition</div>
+          <div class="high-low-wrapper">
+            <div id="high">high</div>
+            <div id="low">low</div>
+          </div>
+        </div>
+      </div>
+    </div>
+     -->
 
 
-    <script src="bundle.js"></script>
+
+    <script src="bundle.js" defer></script>
   </body>
 </html>
