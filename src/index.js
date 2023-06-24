@@ -3,10 +3,11 @@ import "./style.css";
 import { testComponent } from "./updateUI";
 // document.body.appendChild(testComponent());
 import { updateUIElements } from "./updateUI";
+import { createNewCard } from "./updateUI";
 
 // apikey: 55123b8e2f8c4615b54233627232206
 
-let location = "london";
+let isExecuting = false;
 
 function processFormData() {
   location = searchBar.value;
@@ -14,6 +15,13 @@ function processFormData() {
 }
 
 async function logJSONData() {
+
+  // if (isExecuting) {
+  //   console.log('Function is already executing. Aborting...');
+  //   return;
+  // }
+  // isExecuting = true;
+
   const response = await fetch(
     `http://api.weatherapi.com/v1/forecast.json?key=55123b8e2f8c4615b54233627232206&q=${location}&days=7&aqi=yes&alerts=no
     `,
@@ -24,10 +32,17 @@ async function logJSONData() {
   console.log(jsonData.location.name);
   console.log(jsonData.current.feelslike_f)
   console.log("forecast", jsonData.forecast.forecastday[0].day.avgtemp_f)
+  console.log("low", jsonData.forecast.forecastday[0].day.mintemp_f)
+  console.log("high", jsonData.forecast.forecastday[0].day.maxtemp_f)
   
+  const card = createNewCard(jsonData);
+  document.querySelector("#weather-cards").appendChild(card);
+  
+  // isExecuting = false;
 
-  updateUIElements(jsonData);
   return jsonData;
+
+  
 }
 
 
@@ -36,10 +51,17 @@ const searchButton = document.querySelector("#search");
 searchButton.addEventListener("click", () => {
   processFormData();
   logJSONData();
+
+  
 });
 
-processFormData();
-logJSONData();
+// processFormData();
+// logJSONData();
+
+// const card = createNewCard(jsonData);
+
+
+// document.querySelector("#weather-cards").appendChild(card);
 
 
 //https://www.weatherapi.com/api-explorer.aspx#forecast
