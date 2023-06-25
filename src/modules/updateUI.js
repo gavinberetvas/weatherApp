@@ -1,38 +1,3 @@
-export function testComponent() {
-    const element = document.createElement('div');
- 
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-   element.classList.add('hello');
- 
-    return element;
-  }
-
-export function updateUIElements(jsonData) {
-  //current temperature:
-  const location = document.querySelector("#city");
-  const temperatureF = document.querySelector("#temperatureF");
-  const feelsLike = document.querySelector("#feels-like");
-  const humidity = document.querySelector("#humidity");
-  const chanceOfRain = document.querySelector("#chance-of-rain");
-  const condition = document.querySelector("#condition");
-
-  temperatureF.innerHTML = `temperature: ${jsonData.current.temp_f} degrees`
-
-  location.innerHTML = jsonData.location.name
-
-  feelsLike.innerHTML = `feels like: ${jsonData.current.feelslike_f} degrees`
-
-  condition.innerHTML = `it is ${jsonData.current.condition.text}`
-
-  //forecast tomorrow:
-  const tempTomorrow = document.querySelector("#temp-tomorrow");
-  tempTomorrow.innerHTML = `tomorrow will be: ${jsonData.forecast.forecastday[0].day.avgtemp_f} degrees`
-
-
-
-}
-
 export function createNewCard(jsonData) {
   const cardDiv = document.createElement('div');
   cardDiv.className = 'card sample2';
@@ -76,7 +41,6 @@ export function createNewCard(jsonData) {
   const highLowWrapper = document.createElement('div');
   highLowWrapper.className = 'high-low-wrapper';
 
-
   console.log("low", jsonData.forecast.forecastday[0].day.mintemp_f)
   console.log("high", jsonData.forecast.forecastday[0].day.maxtemp_f)
   
@@ -97,5 +61,13 @@ export function createNewCard(jsonData) {
   cardDiv.appendChild(firstRowDiv)
   cardDiv.appendChild(secondRowDiv)
 
+  cardDiv.setAttribute("data-modal-target", "#modal");
+
+  cardDiv.addEventListener("click", function() {
+    console.log("wow");
+    
+  });
+
   return cardDiv
 }
+
