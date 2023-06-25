@@ -1,0 +1,29 @@
+.forecast-wrapper {
+display: flex;
+gap: 1rem;
+padding: 1rem;
+}
+
+.forecast {
+    width: 10rem;
+    height: 8rem;
+    background-color: aqua;
+    border-radius: 18px;
+}
+
+#hourly {
+    width: 90vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin: auto;
+    padding: auto;
+    border-radius: 18px;
+    overflow: scroll;
+  }
+  
+  .hour {
+    border-bottom: 1px solid black;
+    height: 10rem;
+  }
