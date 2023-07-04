@@ -6,8 +6,6 @@ import modal from "./modules/modal";
 
 // apikey: 55123b8e2f8c4615b54233627232206
 
-modal();
-
 let isExecuting = false;
 
 async function createNewWeatherCard(location) {
@@ -27,6 +25,8 @@ async function createNewWeatherCard(location) {
   
   const card = createNewCard(jsonData);
   document.querySelector("#weather-cards").appendChild(card);
+  
+  //needed to 'activate' each card
   modal();
 
   isExecuting = false;

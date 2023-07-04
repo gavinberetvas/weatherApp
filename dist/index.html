@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Application</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="modal.css" />
     <link rel="stylesheet" href="weathercard.css" />
   </head>
@@ -14,43 +14,78 @@
       <input id="searchbar" type="text" placeholder="Search.." />
       <button id="search">Weather!</button>
     </div>
+    <div id="weather-cards"></div>
 
-    <div id="weather-cards">
-    </div>
-
-    <div class="buttonwrapper">
-      <button id="bottom-right" data-modal-target="#modal" class="button button-65"><p id="plus">+</p></button>
-    </div>
+    <!-- repurposed modal again -->
 
     <div class="modal" id="modal">
-      <div class="modal-header">
-        <div class="title" id="modaltitle">${location}</div>
+      <!-- <div class="modal-header">
+        <div class="modal-title" id="modaltitle">Title</div>
         <button data-close-button="" class="close-button" id="closemodal">
           &times;
         </button>
+          <div>
+            <svg
+              class="border-shape"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 800 350"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,350 Q0,300 400,300 C500,300 800,300 800,250 V350 Z"
+                fill="#fff"
+              />
+            </svg>
+          </div>
+      </div> -->
+      <div class="modal-header">
+        <div class="modal-title" id="modaltitle">Title</div>
+        <button data-close-button="" class="close-button" id="closemodal">&times;</button>
+        <div class="svg-container">
+          <svg class="border-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="none">
+            <path d="M0,500 Q0,450 400,450 C500,450 800,450 800,400 V500 Z" fill="#fff" />
+          </svg>
+        </div>
       </div>
+
       <div class="modalbody">
+        <!-- <svg
+          class="border-shape"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 800 350"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,350 Q0,300 400,300 C500,300 800,300 800,250 V350 Z"
+            fill="#fff"
+          />
+        </svg> -->
+
         <!-- <div id="weather-today">TODO: Weather Today</div>
         <div id="hourly-weather">TODO: hourly weather block</div>
         <div id="forecast">TODO: forecast for tomorrow and day after</div> -->
-        <div class="forecast-wrapper">
-          <div class="forecast">today</div>
-          <div class="forecast">tomorrow</div>
-          <div class="forecast">next day</div>
-        </div>
-        <div id="hourly">
-          <div class="hour"></div>
-          <div class="hour"></div>
-          <div class="hour"></div>
-          <div class="hour"></div>
-          <div class="hour"></div>
-          <div class="hour"></div>
-          <div class="hour"></div>
-          <div class="hour"></div>
-          <div class="hour"></div>
-          <div class="hour"></div>
-          <div class="hour"></div>
-          <div class="hour"></div>
+        <div class="bottom-half-card">
+          <div class="hour-container">
+            <div id="parent-hourly">
+              <div class="hour">Current</div>
+              <div class="hour"></div>
+              <div class="hour"></div>
+              <div class="hour"></div>
+              <div class="hour"></div>
+              <div class="hour"></div>
+              <div class="hour"></div>
+              <div class="hour"></div>
+              <div class="hour"></div>
+              <div class="hour"></div>
+              <div class="hour"></div>
+              <div class="hour"></div>
+            </div>
+          </div>
+          <div class="forecast-wrapper">
+            <div class="forecast">today</div>
+            <div class="forecast">tomorrow</div>
+            <div class="forecast">next day</div>
+          </div>
         </div>
       </div>
     </div>
