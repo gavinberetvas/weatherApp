@@ -1,6 +1,10 @@
+import { currentCity } from "..";
+
 export function createNewCard(jsonData) {
   const cardDiv = document.createElement('div');
   cardDiv.className = 'card sample2';
+  cardDiv.setAttribute('data-city', jsonData.location.name);
+
 
   //first row
   const firstRowDiv = document.createElement('div');
@@ -65,6 +69,7 @@ export function createNewCard(jsonData) {
 
   cardDiv.addEventListener("click", function() {
     console.log("wow");
+    currentCity = jsonData.location.name;
     
   });
 

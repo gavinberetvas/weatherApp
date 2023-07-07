@@ -1,17 +1,16 @@
 import _ from "lodash";
 import "./style.css";
-import { updateUIElements } from "./modules/updateUI";
 import { createNewCard } from "./modules/updateUI";
-import modal from "./modules/modal";
-
-// apikey: 55123b8e2f8c4615b54233627232206
+import modal from "./modules/modalActivate";
+import { weatherData } from "./modules/weatherClassConstructor";
+export let weatherObjectArray = [];
+export let currentCity = '';
 
 let isExecuting = false;
 
 async function createNewWeatherCard(location) {
-
   if (isExecuting) {
-    console.log('Function is already executing. Aborting...');
+    console.log("Function is already executing. Aborting...");
     return;
   }
 
@@ -21,11 +20,17 @@ async function createNewWeatherCard(location) {
     `,
     { mode: "cors" }
   );
-  const jsonData = await response.json(); 
-  
+  const jsonData = await response.json();
+
+  //creates weather card UI
   const card = createNewCard(jsonData);
   document.querySelector("#weather-cards").appendChild(card);
-  
+
+  //creates a new mini weather object to draw on later
+  let newMiniWeatherObject = new weatherData(jsonData);
+  weatherObjectArray.push(newMiniWeatherObject);
+  console.log("testing weatherData class", weatherObjectArray)
+
   //needed to 'activate' each card
   modal();
 
@@ -35,8 +40,9 @@ async function createNewWeatherCard(location) {
 
 const searchBar = document.querySelector("#searchbar");
 const searchButton = document.querySelector("#search");
+
 searchButton.addEventListener("click", () => {
   let location = searchBar.value;
   createNewWeatherCard(location);
-  searchBar.value = ''
+  searchBar.value = "";
 });
