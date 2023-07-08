@@ -42,9 +42,12 @@
     display: flex;
     width: 90%;
     height: 5rem;
-    /* background-color: rgb(51, 142, 222); */
-    background-image: url("weather-images/mosi-knife-sun.jpg");
     background-size: cover;
+    /* background-color: rgb(51, 142, 222); */
+
+    /* background-image: url("weather-images/mosi-knife-sun.jpg");
+    background-size: cover; */
+
     border-radius: 18px;
     padding: 1rem;
     margin-top: .3rem;
