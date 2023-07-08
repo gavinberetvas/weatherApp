@@ -5,6 +5,7 @@ import modal from "./modules/modalActivate";
 import { weatherData } from "./modules/weatherClassConstructor";
 export let weatherObjectArray = [];
 export let currentCity = '';
+export let currentCondition = '';
 
 let isExecuting = false;
 

@@ -12,11 +12,16 @@
 .modal-title {
   position: relative;
   z-index: 2;
+  color: white;
 }
 
 .close-button {
   position: relative;
   z-index: 2;
+  color: white;
+}
+* {
+  font-family: arial;
 }
 
 .svg-container {
@@ -49,16 +54,19 @@
 .highs-lows {
   display: flex;
   justify-content: space-around;
+  color: white;
 }
 
 div[data-temperature] {
   /* CSS rules here */
   font-size: 4rem;
+  color:#ffffff
   
 }
 
 div[data-condition] {
   font-size: 1.4rem;
+  color:#ffffff
 }
 
 
