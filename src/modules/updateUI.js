@@ -85,13 +85,13 @@ export function createNewCard(jsonData) {
   return cardDiv
 }
 
-
 function updateCardBackgroundImage(cardDiv, condition) {
   const bodyElement = cardDiv;
   const lowercaseCondition = condition.toLowerCase().replace(/\s/g, ' ');
+  setBodyBackground(lowercaseCondition, bodyElement)
+}
 
-  // bodyElement.style.backgroundImage = 'url("../img/clear.jpeg")';
-
+export function setBodyBackground(lowercaseCondition, bodyElement) {
   if (lowercaseCondition.includes('clear')) {
     // bodyElement.style.backgroundColor = 'yellow';
     bodyElement.style.backgroundImage = 'url("weather-images/sun.png")';
@@ -100,7 +100,7 @@ function updateCardBackgroundImage(cardDiv, condition) {
     bodyElement.style.backgroundImage = 'url("weather-images/sun.png")';
   } else if (lowercaseCondition.includes('partly cloudy')) {
     // bodyElement.style.backgroundColor = 'lightblue';
-    bodyElement.style.backgroundImage = 'url("weather-images/cloudy.png")'
+    bodyElement.style.backgroundImage = 'url("weather-images/cloudy.png")';
   } else if (lowercaseCondition.includes('cloudy') || lowercaseCondition.includes('overcast')) {
     // bodyElement.style.backgroundColor = 'gray';
     bodyElement.style.backgroundImage = 'url("weather-images/cloudy.png")';
@@ -132,52 +132,9 @@ function updateCardBackgroundImage(cardDiv, condition) {
     bodyElement.style.backgroundColor = 'steelblue';
   } else if (lowercaseCondition.includes('ice pellets')) {
     bodyElement.style.backgroundColor = 'aliceblue';
-  } else {
-    bodyElement.style.backgroundColor = 'lightgreen';
   }
 }
 
-// function updateBackgroundImage(REAL)(cardDiv, condition) {
-//   const bodyElement = cardDiv
-//   const lowercaseCondition = condition.toLowerCase();
-
-//   if (lowercaseCondition.includes('clear')) {
-//       bodyElement.style.backgroundImage = 'url("../img/clear.jpeg")';
-//   } else if (lowercaseCondition.includes('sunny')) {
-//       bodyElement.style.backgroundImage = 'url("../img/sunny.jpeg")';
-//   } else if (lowercaseCondition.includes('partly cloudy')) {
-//       bodyElement.style.backgroundImage = 'url("../img/partly_cloudy.jpeg")';
-//   } else if (lowercaseCondition.includes('cloudy') || lowercaseCondition.includes('overcast')) {
-//       bodyElement.style.backgroundImage = 'url("../img/cloudy.jpeg")';
-//   } else if (lowercaseCondition.includes('mist')) {
-//       bodyElement.style.backgroundImage = 'url("../img/mist.jpeg")';
-//   } else if (lowercaseCondition.includes('fog')) {
-//       bodyElement.style.backgroundImage = 'url("../img/fog.jpeg")';
-//   } else if (lowercaseCondition.includes('haze')) {
-//       bodyElement.style.backgroundImage = 'url("../img/haze.jpeg")';
-//   } else if (lowercaseCondition.includes('smoke')) {
-//       bodyElement.style.backgroundImage = 'url("../img/smoke.jpeg")';
-//   } else if (lowercaseCondition.includes('dust')) {
-//       bodyElement.style.backgroundImage = 'url("../img/dust.jpeg")';
-//   } else if (lowercaseCondition.includes('sand')) {
-//       bodyElement.style.backgroundImage = 'url("../img/sand.jpeg")';
-//   } else if (lowercaseCondition.includes('rain') || lowercaseCondition.includes('showers')) {
-//       bodyElement.style.backgroundImage = 'url("../img/rain.jpeg")';
-//   } else if (lowercaseCondition.includes('drizzle')) {
-//       bodyElement.style.backgroundImage = 'url("../img/drizzle.jpeg")';
-//   } else if (lowercaseCondition.includes('thunderstorm')) {
-//       bodyElement.style.backgroundImage = 'url("../img/thunderstorm.jpeg")';
-//   } else if (lowercaseCondition.includes('snow')) {
-//       bodyElement.style.backgroundImage = 'url("../img/snow.jpeg")';
-//   } else if (lowercaseCondition.includes('blowing snow')) {
-//       bodyElement.style.backgroundImage = 'url("../img/blowing_snow.jpeg")';
-//   } else if (lowercaseCondition.includes('sleet')) {
-//       bodyElement.style.backgroundImage = 'url("../img/sleet.jpeg")';
-//   } else if (lowercaseCondition.includes('freezing rain')) {
-//       bodyElement.style.backgroundImage = 'url("../img/freezing_rain.jpeg")';
-//   } else if (lowercaseCondition.includes('ice pellets')) {
-//       bodyElement.style.backgroundImage = 'url("../img/ice_pellets.jpeg")';
-//   } else {
-//       bodyElement.style.backgroundImage = 'url("../img/default.jpg")';
-//   }
-// }
+function updateToday() {
+  
+}

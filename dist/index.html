@@ -21,21 +21,33 @@
     <div class="modal" id="modal">
       <div class="modal-header">
         <div class="primaryinfo">
-            <div class="modal-title" id="modaltitle">Sample Location</div>
-            <button data-close-button="" class="close-button" id="closemodal">&times;</button>
+          <div class="modal-title" id="modaltitle">Sample Location</div>
+          <button data-close-button="" class="close-button" id="closemodal">
+            &times;
+          </button>
         </div>
         <div class="secondaryinfo">
           <div class="temp-degrees" data-temperature="77">77°</div>
-          <div class="condition-line" data-condition="mostly sunny">Mostly Sunny</div>
+          <div class="condition-line" data-condition="mostly sunny">
+            Mostly Sunny
+          </div>
           <div class="highs-lows">
-            <div class="highs" data-high="78">78°</div>
             <div class="lows" data-low="50">50°</div>
+            <div class="highs" data-high="78">78°</div>
           </div>
         </div>
 
         <div class="svg-container">
-          <svg class="border-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="none">
-            <path d="M0,500 Q0,450 400,450 C500,450 800,450 800,400 V500 Z" fill="#fff" />
+          <svg
+            class="border-shape"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 800 500"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,500 Q0,450 400,450 C500,450 800,450 800,400 V500 Z"
+              fill="#fff"
+            />
           </svg>
         </div>
       </div>
@@ -59,9 +71,57 @@
             </div>
           </div>
           <div class="forecast-wrapper">
-            <div class="forecast">today</div>
-            <div class="forecast">tomorrow</div>
-            <div class="forecast">next day</div>
+            <div class="forecast">
+              <div class="forecast-header">Today</div>
+              <div id="today-icon-wrapper">
+                <img
+                  class="forecast-icon"
+                  src="../dist/weather-images/weather-sunny.svg"
+                  alt=""
+                  class="src"
+                />
+              </div>
+              <div>
+                <div class="forecast-highs-lows">
+                  <div class="forecast-lows" id="forecastTodayLow"></div>
+                  <div class="forecast-highs" id="forecastTodayHigh"></div>                </div>
+              </div>
+            </div>
+            <div class="forecast">
+              <div class="forecast-header">Tomorrow</div>
+              <div id="tomorrow-icon-wrapper">
+                <img
+                  class="forecast-icon"
+                  src="../dist/weather-images/weather-partly-cloudy.svg"
+                  alt=""
+                  class="src"
+                />
+              </div>
+              <div>
+                <div class="forecast-highs-lows">
+                  <div class="forecast-lows" id="forecastTomorrowLow">xx</div>
+                  <div class="forecast-highs" id="forecastTomorrowHigh">xx</div>
+                </div>
+              </div>
+            </div>
+            <div class="forecast">
+              <div class="forecast-header">Day After</div>
+              <div id="dayafter-icon-wrapper">
+                <img
+                  class="forecast-icon"
+                  src="../dist/weather-images/weather-partly-cloudy.svg"
+                  alt=""
+                  class="src"
+                />
+              </div>
+              <div>
+                <div class="forecast-highs-lows">
+                  <div class="forecast-lows" id="forecastDayAfterLow">yy</div>
+                  <div class="forecast-highs" id="forecastDayAfterHigh">yy</div>
+                  
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
