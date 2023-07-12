@@ -108,6 +108,7 @@ div[data-condition] {
   z-index: 1;
   padding: 1.3rem 0rem 1.3rem 0rem;
   border-radius: 30px;
+  
   /* background-color: black;
   
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 6px inset, rgba(255, 255, 255, 0.5) -3px -3px px 1px inset;  
@@ -117,27 +118,41 @@ div[data-condition] {
 
 #parent-hourly {
   position: relative;
-  height: 130px; /* Set a fixed or maximum height */
+  height: 150px; /* Set a fixed or maximum height */
   overflow-x: auto; /* Enable horizontal scrolling */
   white-space: nowrap;
   display: grid;
-  grid-template-columns: repeat(12, 1fr); /* 1x12 grid */
+  grid-template-columns: repeat(24, 1fr); /* 1x12 grid */
   gap: 0.1rem;
   padding: 0rem 0rem 0rem 0rem;
   /* Enable scrolling if content overflows */
 }
 
 .hour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
   /* Styles for the individual hour elements */
   border-radius: 18px;
-  height: 120px;
+  max-height: 140px;
   width: 70px; /* Adjust as per your requirements */
   BORDER: TRANSPARENT;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
   margin-bottom: 10px; /* Add some spacing between the hours */
 }
+
+.hourly-time {
+margin-bottom: 0;
+}
+
+.hourly-temperature {
+  margin: .2rem;
+  margin-bottom: 0;
+}
 .hour:last-child{
-  margin-right: 4rem;
+  margin-right: 1rem;
 }
 
 .forecast {
