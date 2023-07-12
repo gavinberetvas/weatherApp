@@ -13,6 +13,12 @@ export class weatherData {
     this.dayAfterCondition =
       jsonData.forecast.forecastday[2].day.condition.text;
     this.dayAfterLow = jsonData.forecast.forecastday[2].day.mintemp_f;
+    //hourly data
+    this.hourAtAPIRequest = new Date().getHours();;
+    for (let i = 0; i < 24; i++) {
+      this[`tempHour${i}`] = jsonData.forecast.forecastday[0].hour[i].temp_f;
+      this[`conditionHour${i}`] = jsonData.forecast.forecastday[0].hour[i].condition.text;
+    }
   }
 }
 
@@ -65,13 +71,35 @@ export function changeModalUIElements(weatherObjectArray, currentCity) {
   highElementForecastDayAfter.innerHTML = `${selectedCity.dayAfterHigh}°`;
   lowElementForecastDayAfter.innerHTML = `${selectedCity.dayAfterLow}°`;
 
-  console.log("testing condition forecast", selectedCity.tomorrowCondition);
-  console.log("testing condition forecast 2", selectedCity.dayAfterCondition);
+  //hourly components
 
-  ChangeConditionImages(selectedCity);
+  console.log("whole selected city object with hour iteration", selectedCity)
+
+  changeConditionImages(selectedCity);
+  updateHourlyForecast(selectedCity);
 }
 
-function ChangeConditionImages(selectedCity) {
+function updateHourlyForecast(selectedCity) {
+  const container = document.getElementById('parent-hourly');
+
+  for (let i = 0; i < 24; i++) {
+    const modifiedCondition = selectedCity[`conditionHour${i}`].toLowerCase()
+    .replace(/\s/g, " ");
+    const conditionImage = updateDivInnerHTML(modifiedCondition);
+    const temp = selectedCity[`tempHour${i}`];
+    const div = document.createElement('div');
+    div.classList.add('hour');
+    div.innerHTML = 
+    `<p class="hourly-time"> ${i+1}:00</p>
+    ${conditionImage}
+    <p class="hourly-temperature"> ${temp}° <p>
+    `
+    container.appendChild(div)
+  }
+  console.log("test", container)
+}
+
+function changeConditionImages(selectedCity) {
   const todayCondition = selectedCity.condition
     .toLowerCase()
     .replace(/\s/g, " ");
