@@ -81,6 +81,7 @@ export function changeModalUIElements(weatherObjectArray, currentCity) {
 
 function updateHourlyForecast(selectedCity) {
   const container = document.getElementById('parent-hourly');
+  container.innerHTML = '';
 
   for (let i = 0; i < 24; i++) {
     const modifiedCondition = selectedCity[`conditionHour${i}`].toLowerCase()
