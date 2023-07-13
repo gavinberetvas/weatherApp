@@ -87,7 +87,7 @@ function updateHourlyForecast(selectedCity) {
     const div = document.createElement('div');
     div.classList.add('hour');
     div.innerHTML = 
-    `<p class="hourly-time"> ${i+1}:00</p>
+    `<p class="hourly-time"> ${i}:00</p>
     ${conditionImage}
     <p class="hourly-temperature"> ${temp}° <p>
     `
