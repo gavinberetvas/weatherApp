@@ -122,19 +122,15 @@ function changeConditionImages(selectedCity) {
 
 function updateDivInnerHTML(lowercaseCondition) {
   if (lowercaseCondition.includes("clear")) {
-    // bodyElement.style.backgroundColor = 'yellow';
     return `<img class="forecast-icon" src="../dist/weather-images/weather-sunny.svg" alt=""/>`;
   } else if (lowercaseCondition.includes("sunny")) {
-    // bodyElement.style.backgroundColor = 'orange';
     return `<img class="forecast-icon" src="../dist/weather-images/weather-sunny.svg" alt=""/>`;
   } else if (lowercaseCondition.includes("partly cloudy")) {
-    // bodyElement.style.backgroundColor = 'lightblue';
     return `<img class="forecast-icon" src="../dist/weather-images/weather-partly-cloudy.svg" alt=""/>`;
   } else if (
     lowercaseCondition.includes("cloudy") ||
     lowercaseCondition.includes("overcast")
   ) {
-    // bodyElement.style.backgroundColor = 'gray';
     return `<img class="forecast-icon" src="../dist/weather-images/weather-cloudy.svg" alt=""/>`;
   } else if (lowercaseCondition.includes("mist")) {
     return `<img class="forecast-icon" src="../dist/weather-images/weather-cloudy.svg" alt=""/>`;
