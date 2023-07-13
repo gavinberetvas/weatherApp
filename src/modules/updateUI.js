@@ -120,5 +120,7 @@ export function setBodyBackground(lowercaseCondition, bodyElement) {
     bodyElement.style.backgroundImage = 'url("weather-images/snow.jpg")';
   } else if (lowercaseCondition.includes('ice pellets')) {
     bodyElement.style.backgroundImage = 'url("weather-images/snow.jpg")';
+  } else if (lowercaseCondition.includes('thunder')) {
+    bodyElement.style.backgroundImage = 'url("weather-images/rain.jpg")';
   }
 }
