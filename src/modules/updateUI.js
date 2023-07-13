@@ -3,19 +3,11 @@ import { currentCondition } from "..";
 
 export function createNewCard(jsonData) {
   const cardDiv = document.createElement('div');
-  cardDiv.className = 'card sample2';
-
-  // cardDiv.setAttribute('data-city', jsonData.location.name);
-  // cardDiv.setAttribute('data-condition', `${jsonData.current.condition.text.toLowerCase()}`);
-  //two ways to change background image...
-  //using class lists or js data-attributes.
+  cardDiv.className = 'card';
   let condition = jsonData.current.condition.text
 
   updateCardBackgroundImage(cardDiv, condition)
 
-  // cardDiv.classList.add(`${jsonData.current.condition.text.toLowerCase()}`);
-
-  //first row
   const firstRowDiv = document.createElement('div');
   firstRowDiv.className = 'card-first-row';
 
@@ -24,7 +16,6 @@ export function createNewCard(jsonData) {
 
   const cityDiv = document.createElement('div');
   cityDiv.id = 'city';
-
   cityDiv.textContent = jsonData.location.name;
 
   cityTimeWrapper.appendChild(cityDiv);
@@ -46,9 +37,6 @@ export function createNewCard(jsonData) {
   const highLowWrapper = document.createElement('div');
   highLowWrapper.className = 'high-low-wrapper';
 
-  console.log("low", jsonData.forecast.forecastday[0].day.mintemp_f)
-  console.log("high", jsonData.forecast.forecastday[0].day.maxtemp_f)
-  
   const highDiv = document.createElement('div');
   highDiv.id = 'high';
   highDiv.textContent = `${jsonData.forecast.forecastday[0].day.maxtemp_f}°F`;
@@ -59,19 +47,14 @@ export function createNewCard(jsonData) {
 
   highLowWrapper.appendChild(highDiv);
   highLowWrapper.appendChild(lowDiv);
-
   secondRowDiv.appendChild(conditionDiv)
   secondRowDiv.appendChild(highLowWrapper)
-  
   cardDiv.appendChild(firstRowDiv)
   cardDiv.appendChild(secondRowDiv)
-
   cardDiv.setAttribute("data-modal-target", "#modal");
-
   cardDiv.addEventListener("click", function() {
     currentCity = jsonData.location.name;
     currentCondition = jsonData.current.condition.text
-    
   });
 
   return cardDiv

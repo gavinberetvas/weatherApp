@@ -43,14 +43,6 @@ function modal() {
     modal.classList.remove("active");
     overlay.classList.remove("active");
   }
-
-  // form.addEventListener("submit", (event) => {
-  //     // event.preventDefault();
-  //     // myLibrary.newNote(event, index);
-  //     // pushtoDom();
-
-  //     // localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
-  //   });
 }
 
 export default modal;

@@ -71,10 +71,6 @@ export function changeModalUIElements(weatherObjectArray, currentCity) {
   highElementForecastDayAfter.innerHTML = `${selectedCity.dayAfterHigh}°`;
   lowElementForecastDayAfter.innerHTML = `${selectedCity.dayAfterLow}°`;
 
-  //hourly components
-
-  console.log("whole selected city object with hour iteration", selectedCity)
-
   changeConditionImages(selectedCity);
   updateHourlyForecast(selectedCity);
 }
@@ -128,8 +124,7 @@ function updateDivInnerHTML(lowercaseCondition) {
   } else if (lowercaseCondition.includes("partly cloudy")) {
     return `<img class="forecast-icon" src="../dist/weather-images/weather-partly-cloudy.svg" alt=""/>`;
   } else if (
-    lowercaseCondition.includes("cloudy") ||
-    lowercaseCondition.includes("overcast")
+    lowercaseCondition.includes("cloudy") || lowercaseCondition.includes("overcast")
   ) {
     return `<img class="forecast-icon" src="../dist/weather-images/weather-cloudy.svg" alt=""/>`;
   } else if (lowercaseCondition.includes("mist")) {
@@ -145,8 +140,7 @@ function updateDivInnerHTML(lowercaseCondition) {
   } else if (lowercaseCondition.includes("sand")) {
     return `<img class="forecast-icon" src="../dist/weather-images/weather-cloudy.svg" alt=""/>`;
   } else if (
-    lowercaseCondition.includes("rain") ||
-    lowercaseCondition.includes("showers")
+    lowercaseCondition.includes("rain") || lowercaseCondition.includes("showers")
   ) {
     return `<img class="forecast-icon" src="../dist/weather-images/weather-pouring.svg" alt=""/>`;
   } else if (lowercaseCondition.includes("drizzle")) {
