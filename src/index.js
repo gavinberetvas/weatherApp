@@ -17,7 +17,7 @@ async function createNewWeatherCard(location) {
 
   isExecuting = true;
   const response = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=55123b8e2f8c4615b54233627232206&q=${location}&days=7&aqi=yes&alerts=no
+    `https://api.weatherapi.com/v1/forecast.json?key=55123b8e2f8c4615b54233627232206&q=${location}&days=7&aqi=yes&alerts=no
     `,
     { mode: "cors" }
   );
