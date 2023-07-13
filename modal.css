@@ -21,19 +21,18 @@
   font-size: 2rem;
   margin-right: 0;
   margin-left: auto;
-  background-color: transparent; /* Set the background color to transparent */
-  border: none; /* Remove the border */
+  background-color: transparent; 
+  border: none;
   outline: none;
 
 }
 
 .modal {
   position: fixed;
-  bottom: -100%; /* Start the modal at the bottom of the screen */
+  bottom: -100%;
   left: 50%;
   transform: translateX(-50%);
   transition: 200ms ease-in-out;
-  /* border: 1px solid rgb(255, 255, 255); */
   border-radius: 10px;
   z-index: 10;
   background-color: white;
@@ -44,15 +43,12 @@
 }
 
 .modal.active {
-  bottom: 0; /* Move the modal up to the center of the screen */
+  bottom: 0;
 }
 
 .modal-header {
   padding: 8px 25px 0 0;
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* border-bottom: 1px solid white; */
   border-radius: 40px 40px 0 0;
   display: flex;
   align-items: center;
