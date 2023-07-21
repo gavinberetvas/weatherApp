@@ -68,25 +68,25 @@ function updateCardBackgroundImage(cardDiv, condition) {
 
 export function setBodyBackground(lowercaseCondition, bodyElement) {
   if (lowercaseCondition.includes('clear')) {
-    bodyElement.style.backgroundImage = 'url("weather-images/clear-sun.jpg")';
+    bodyElement.style.backgroundImage = 'url("../src/weather-images/clear-sun.jpg")';
   } else if (lowercaseCondition.includes('sunny')) {
-    bodyElement.style.backgroundImage = 'url("weather-images/clear-sun.jpg")';
+    bodyElement.style.backgroundImage = 'url("../src/weather-images/clear-sun.jpg")';
   } else if (lowercaseCondition.includes('partly cloudy')) {
-    bodyElement.style.backgroundImage = 'url("weather-images/cloudy.png")';
+    bodyElement.style.backgroundImage = 'url("../src/weather-images/cloudy.png")';
   } else if (lowercaseCondition.includes('cloudy') || lowercaseCondition.includes('overcast')) {
-    bodyElement.style.backgroundImage = 'url("weather-images/cloudy.png")';
+    bodyElement.style.backgroundImage = 'url("../src/weather-images/cloudy.png")';
   } else if (lowercaseCondition.includes('mist')) {
-    bodyElement.style.backgroundImage = 'url("weather-images/misty.jpg")';
+    bodyElement.style.backgroundImage = 'url("../src/weather-images/misty.jpg")';
   } else if (lowercaseCondition.includes('fog')) {
-    bodyElement.style.backgroundImage = 'url("weather-images/misty.jpg")';
+    bodyElement.style.backgroundImage = 'url("../src/weather-images/misty.jpg")';
   } else if (lowercaseCondition.includes('haze')) {
-    bodyElement.style.backgroundImage = 'url("weather-images/misty.jpg")';
+    bodyElement.style.backgroundImage = 'url("../src/weather-images/misty.jpg")';
   } else if (lowercaseCondition.includes('smoke')) {
-    bodyElement.style.backgroundImage = 'url("weather-images/misty.jpg")';
+    bodyElement.style.backgroundImage = 'url("../src/weather-images/misty.jpg")';
   } else if (lowercaseCondition.includes('dust')) {
-    bodyElement.style.backgroundImage = 'url("weather-images/sand.jpg")';
+    bodyElement.style.backgroundImage = 'url("../src/weather-images/sand.jpg")';
   } else if (lowercaseCondition.includes('sand')) {
-    bodyElement.style.backgroundImage = 'url("weather-images/sand.jpg")';
+    bodyElement.style.backgroundImage = 'url("../src/weather-images/sand.jpg")';
   } else if (lowercaseCondition.includes('rain') || lowercaseCondition.includes('showers')) {
     bodyElement.style.backgroundImage = 'url("weather-images/rain.jpg")';
   } else if (lowercaseCondition.includes('drizzle')) {

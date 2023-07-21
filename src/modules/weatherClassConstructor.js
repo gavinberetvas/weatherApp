@@ -118,17 +118,17 @@ function changeConditionImages(selectedCity) {
 
 function updateDivInnerHTML(lowercaseCondition) {
   if (lowercaseCondition.includes("clear")) {
-    return `<img class="forecast-icon" src="../dist/weather-images/weather-sunny.svg" alt=""/>`;
+    return `<img class="forecast-icon" src="../src/weather-images/weather-sunny.svg" alt=""/>`;
   } else if (lowercaseCondition.includes("sunny")) {
-    return `<img class="forecast-icon" src="../dist/weather-images/weather-sunny.svg" alt=""/>`;
+    return `<img class="forecast-icon" src="../src/weather-images/weather-sunny.svg" alt=""/>`;
   } else if (lowercaseCondition.includes("partly cloudy")) {
-    return `<img class="forecast-icon" src="../dist/weather-images/weather-partly-cloudy.svg" alt=""/>`;
+    return `<img class="forecast-icon" src="../src/weather-images/weather-partly-cloudy.svg" alt=""/>`;
   } else if (
     lowercaseCondition.includes("cloudy") || lowercaseCondition.includes("overcast")
   ) {
-    return `<img class="forecast-icon" src="../dist/weather-images/weather-cloudy.svg" alt=""/>`;
+    return `<img class="forecast-icon" src="../src/weather-images/weather-cloudy.svg" alt=""/>`;
   } else if (lowercaseCondition.includes("mist")) {
-    return `<img class="forecast-icon" src="../dist/weather-images/weather-cloudy.svg" alt=""/>`;
+    return `<img class="forecast-icon" src="../src/weather-images/weather-cloudy.svg" alt=""/>`;
   } else if (lowercaseCondition.includes("fog")) {
     return `<img class="forecast-icon" src="../dist/weather-images/weather-cloudy.svg" alt=""/>`;
   } else if (lowercaseCondition.includes("haze")) {
