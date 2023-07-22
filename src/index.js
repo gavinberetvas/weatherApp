@@ -7,6 +7,8 @@ export let weatherObjectArray = [];
 export let currentCity = '';
 export let currentCondition = '';
 
+import clearSky from "./weather-images/clear-sun.jpg"
+
 let isExecuting = false;
 
 async function createNewWeatherCard(location) {
@@ -47,3 +49,4 @@ searchButton.addEventListener("click", () => {
   createNewWeatherCard(location);
   searchBar.value = "";
 });
+
