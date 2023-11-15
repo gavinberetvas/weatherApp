@@ -35,10 +35,10 @@ This project was mainly geared towards familiarizing myself in using API's and w
 
 ## Potential Future Updates
 
-[ ] Add local storage
-[ ] Add a delete feature for the weather cards on main page.
-[ ] Clean up the code
-[ ] Dark mode switch
+- [ ] Add local storage
+- [ ] Add a delete feature for the weather cards on main page.
+- [ ] Clean up the code
+- [ ] Dark mode switch
 
 ## License
 
