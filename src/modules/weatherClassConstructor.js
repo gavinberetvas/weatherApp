@@ -124,6 +124,7 @@ function changeConditionImages(selectedCity) {
 }
 
 export function updateDivInnerHTML(lowercaseCondition) {
+  console.log("waka-waka")
   if (lowercaseCondition.includes("clear")) {
     return `<img class="forecast-icon" src="weather-images/weather-sunny.svg" alt=""/>`;
   } else if (lowercaseCondition.includes("sunny")) {
