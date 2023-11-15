@@ -123,68 +123,29 @@ function changeConditionImages(selectedCity) {
   dayAfterDiv.innerHTML = updateDivInnerHTML(dayAfterCondition);
 }
 
-export function updateDivInnerHTML(lowercaseCondition) {
-  console.log("waka-waka")
-  if (lowercaseCondition.includes("clear")) {
-    return `<img class="forecast-icon" src="weather-images/weather-sunny.svg" alt=""/>`;
-  } else if (lowercaseCondition.includes("sunny")) {
-    return `<img class="forecast-icon" src="weather-images/weather-sunny.svg" alt=""/>`;
-  } else if (lowercaseCondition.includes("partly cloudy")) {
-    return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
-  } else if (lowercaseCondition.includes("cloudy") || lowercaseCondition.includes("overcast")) {
-    return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
-  } else if (lowercaseCondition.includes("mist")) {
-    return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
-  } else if (lowercaseCondition.includes("fog")) {
-    return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
-  } else if (lowercaseCondition.includes("haze")) {
-    return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
-  } else if (lowercaseCondition.includes("smoke")) {
-    return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
-  } else if (lowercaseCondition.includes("dust")) {
-    return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
-  } else if (lowercaseCondition.includes("sand")) {
-    return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
-  } else if (lowercaseCondition.includes("rain") || lowercaseCondition.includes("showers")) {
-    return `<img class="forecast-icon" src="${pouringImage}" alt=""/>`;
-  } else if (lowercaseCondition.includes("drizzle")) {
-    return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
-  } else if (lowercaseCondition.includes("thunderstorm")) {
-    return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
-  } else if (lowercaseCondition.includes("snow")) {
-    return `<img class="forecast-icon" src="${snowyImage}" alt=""/>`;
-  } else if (lowercaseCondition.includes("blowing snow")) {
-    return `<img class="forecast-icon" src="${snowyImage}" alt=""/>`;
-  } else if (lowercaseCondition.includes("sleet")) {
-    return `<img class="forecast-icon" src="${snowyImage}" alt=""/>`;
-  } else if (lowercaseCondition.includes("freezing rain")) {
-    return `<img class="forecast-icon" src="${snowyImage}" alt=""/>`;
-  } else if (lowercaseCondition.includes("ice pellets")) {
-    return `<img class="forecast-icon" src="${snowyImage}" alt=""/>`;
-  }
-}
-
-// export function updateDivInnerHTML(CURRENT)(lowercaseCondition) {
+// export function updateDivInnerHTML2(lowercaseCondition) {
+//   console.log("waka-waka");
+  
 //   if (lowercaseCondition.includes("clear")) {
-//     return `<img class="forecast-icon" src="${sunnyImage}" alt=""/>`;
+//     return `<img class="forecast-icon" src="weather-images/weather-sunny.svg" alt=""/>`;
 //   } else if (lowercaseCondition.includes("sunny")) {
-//     return `<img class="forecast-icon" src="${sunnyImage}" alt=""/>`;
+//     return `<img class="forecast-icon" src="weather-images/weather-sunny.svg" alt=""/>`;
 //   } else if (lowercaseCondition.includes("partly cloudy")) {
-//     return `<img class="forecast-icon" src="${partlyCloudyImage}" alt=""/>`;
+//     return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
 //   } else if (lowercaseCondition.includes("cloudy") || lowercaseCondition.includes("overcast")) {
-//     return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+//     return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
 //   } else if (lowercaseCondition.includes("mist")) {
-//     return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+//     return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
 //   } else if (lowercaseCondition.includes("fog")) {
-//     return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+//     return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
 //   } else if (lowercaseCondition.includes("haze")) {
-//     return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+//     return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
 //   } else if (lowercaseCondition.includes("smoke")) {
-//     return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+//     return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
 //   } else if (lowercaseCondition.includes("dust")) {
-//     return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+//     return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
 //   } else if (lowercaseCondition.includes("sand")) {
-//     return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+//     return `<img class="forecast-icon" src="weather-images/weather-partly-cloudy.svg" alt=""/>`;
 //   } else if (lowercaseCondition.includes("rain") || lowercaseCondition.includes("showers")) {
 //     return `<img class="forecast-icon" src="${pouringImage}" alt=""/>`;
 //   } else if (lowercaseCondition.includes("drizzle")) {
@@ -203,6 +164,46 @@ export function updateDivInnerHTML(lowercaseCondition) {
 //     return `<img class="forecast-icon" src="${snowyImage}" alt=""/>`;
 //   }
 // }
+
+export function updateDivInnerHTML(lowercaseCondition) {
+  if (lowercaseCondition.includes("clear")) {
+    return `<img class="forecast-icon" src="${sunnyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("sunny")) {
+    return `<img class="forecast-icon" src="${sunnyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("partly cloudy")) {
+    return `<img class="forecast-icon" src="${partlyCloudyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("cloudy") || lowercaseCondition.includes("overcast")) {
+    return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("mist")) {
+    return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("fog")) {
+    return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("haze")) {
+    return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("smoke")) {
+    return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("dust")) {
+    return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("sand")) {
+    return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("rain") || lowercaseCondition.includes("showers")) {
+    return `<img class="forecast-icon" src="${pouringImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("drizzle")) {
+    return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("thunderstorm")) {
+    return `<img class="forecast-icon" src="${cloudyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("snow")) {
+    return `<img class="forecast-icon" src="${snowyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("blowing snow")) {
+    return `<img class="forecast-icon" src="${snowyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("sleet")) {
+    return `<img class="forecast-icon" src="${snowyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("freezing rain")) {
+    return `<img class="forecast-icon" src="${snowyImage}" alt=""/>`;
+  } else if (lowercaseCondition.includes("ice pellets")) {
+    return `<img class="forecast-icon" src="${snowyImage}" alt=""/>`;
+  }
+}
 
 // function updateDivInnerHTMLOld(lowercaseCondition) {
 //   if (lowercaseCondition.includes("clear")) {
