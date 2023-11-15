@@ -21,7 +21,7 @@ This project was mainly geared towards familiarizing myself in using API's and w
 * Git/GitHub
 * Node.js 
 * Visual Studio Code
-* webpack
+* Webpack
 
 ## Features
 
