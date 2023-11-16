@@ -21,12 +21,12 @@ This project was mainly geared towards familiarizing myself in using API's and w
 * Git/GitHub
 * Node.js 
 * Visual Studio Code
-* Webpack
+* ebpack
 
 ## Features
 
 * Asynchronous weather retrieval function referencing the free [weather API](https://www.weatherapi.com/).
-* API Fetch request aborts on erroneous searches (e.g. " " "asdf") so as to not return bad/missing data.
+* API Fetch request aborts on erroneous searches (e.g. " ", "asdf") so as to not return bad/missing data.
 * Flexible modal that repopulates image and data based on the weather card selected. 
 * Unique weather SVG's and images based on the varying forecasts and locations.
 * Retrieves current, hourly, and weekly forecast in weather modal.
